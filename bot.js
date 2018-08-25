@@ -342,4 +342,4 @@ client.on('message', message => {
     }
 });
 
-client.login(NDgwNDcyMzc1MDQ1OTE0NjM0.DloXYQ.FI9Bfxgrt0jmS2sog5LCRgstj4Y);
+client.login(process.env.BOT_TOKEN);
