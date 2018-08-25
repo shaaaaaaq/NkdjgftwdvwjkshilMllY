@@ -31,7 +31,7 @@ client.user.setGame(`Nothing`,"http://twitch.tv/S-F")
 const Eris = require("eris");
 const FS = require("fs");
 
-var bot = new Eris(NDgwNDcyMzc1MDQ1OTE0NjM0.DloXYQ.FI9Bfxgrt0jmS2sog5LCRgstj4Y);
+var bot = new Eris("NDgwNDcyMzc1MDQ1OTE0NjM0.DloXYQ.FI9Bfxgrt0jmS2sog5LCRgstj4Y");
 // Replace BOT_TOKEN with your bot account's token
 var playCommand = "Hplay";// هنا تقدر تغيير امر التشغيل 
 
@@ -80,4 +80,4 @@ bot.connect(); // Get the bot to connect to Discord
 
 
 
-client.login(NDgwNDcyMzc1MDQ1OTE0NjM0.DloXYQ.FI9Bfxgrt0jmS2sog5LCRgstj4Y);
+client.login("NDgwNDcyMzc1MDQ1OTE0NjM0.DloXYQ.FI9Bfxgrt0jmS2sog5LCRgstj4Y");
