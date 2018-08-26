@@ -1,8 +1,10 @@
 
+
+
 const Eris = require("eris");
 const FS = require("fs");
 
-var bot = new Eris("NDgwNDQwNzg2NjY4NzQ4ODEw.DmOhOw.-ghVg9VxYQk0SiLGV5YB_L9NCdE");
+var bot = new Eris("توكن بوتك هنا ");
 // Replace BOT_TOKEN with your bot account's token
 var playCommand = "Shplay";// هنا تقدر تغيير امر التشغيل 
 
