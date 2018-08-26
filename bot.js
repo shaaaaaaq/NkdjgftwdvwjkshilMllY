@@ -20,7 +20,7 @@ const gif = require("gif-search");
 
 const client = new Discord.Client({disableEveryone: true});
 
-const prefix = "L";
+const prefix = "Sh";
 /////////////////////////
 ////////////////////////
 
@@ -313,7 +313,7 @@ function play(guild, song) {
 
 
 client.on('message', message => {
-    if (message.content === 'Lhelp') {
+    if (message.content === 'Shhelp') {
         let helpEmbed = new Discord.RichEmbed()
         .setTitle('**أوامر الميوزك...**')
         .setDescription('**برفكس البوت (L)**')
@@ -342,7 +342,7 @@ client.on('message', message => {
     }
 });
 client.on("message", msg => {
-  if(msg.content === 'L' + "id") {
+  if(msg.content === 'Sh' + "id") {
       const embed = new Discord.RichEmbed();
   embed.addField("🔱| اسم الحساب :", `${msg.author.username}#${msg.author.discriminator}`, true)
           .addField("🆔| الاي دي :", `${msg.author.id}`, true)
@@ -387,7 +387,7 @@ let args = message.content.split(' ').slice(1).join(' ');
 });
 client.on('ready', function(){    
     var ms = 40000 ;    
-    var setGame = ['Shaaaq','Shhelp'];    
+    var setGame = ['Shaaaaq.','Music knows my deepest feelings.'];    
     var i = -1;    
     var j = 0;    
     setInterval(function (){    
