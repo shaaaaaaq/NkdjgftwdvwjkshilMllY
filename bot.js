@@ -316,7 +316,7 @@ client.on('message', message => {
     if (message.content === 'Shhelp') {
         let helpEmbed = new Discord.RichEmbed()
         .setTitle('**أوامر الميوزك...**')
-        .setDescription('**برفكس البوت (!)**')
+        .setDescription('**برفكس البوت (L)**')
         .addField('play', 'لتشغيل اغنية')
         .addField('join', 'دخول رومك الصوتي')
         .addField('disconnect', 'الخروج من رومك الصوتي')
@@ -341,53 +341,23 @@ client.on('message', message => {
       message.channel.send(helpEmbed);
     }
 });
-client.on('message', message => {
-  if (!message.content.startsWith(PREFIX)) return;
-  var args = message.content.split(' ').slice(1);
-  var argresult = args.join(' ');
-  if (message.author.id !== "439187325503930369") return;
-
-if (message.content.startsWith(PREFIX + 'setstream')) {
-  client.user.setGame(argresult, "https://www.twitch.tv/darkknite55");
-	 console.log('test' + argresult);
-    message.channel.sendMessage(`Streaming: **${argresult}`)
-}
-
-if (message.content.startsWith(PREFIX + 'setname')) {
-  client.user.setUsername(argresult).then
-	  message.channel.sendMessage(`Username Changed To **${argresult}**`)
-  return message.reply("You Can change the username 2 times per hour");
-}
-if (message.content.startsWith(PREFIX + 'setavatar')) {
-  client.user.setAvatar(argresult);
-   message.channel.sendMessage(`Avatar Changed Successfully To **${argresult}**`);
-}
-});
-client.on('message', async message => {
-            if(!message.channel.guild) return;
-             if (message.content.startsWith("Shsets")) {
-let args = message.content.split(' ').slice(1).join(' ');
-            let sigMessage = await args;
-            
-            if (sigMessage === "online") {
-                client.user.setStatus("online");
-                message.author.send("Your status was set to online.");
-            }
-            if (sigMessage === "idle") {
-                client.user.setStatus("idle");
-                message.author.send("Your status was set to idle.");
-            }
-            if (sigMessage === "invisible") {
-                client.user.setStatus("invisible");
-                message.author.send("Your status was set to invisible.");
-            }
-            if (sigMessage === "dnd") {
-                client.user.setStatus("dnd");
-                message.author.send("Your status was set to dnd.");
-            }
-            // message.author.send("." + message.content);
-        
-}
+client.on("message", msg => {
+  if(msg.content === 'Sh' + "id") {
+      const embed = new Discord.RichEmbed();
+  embed.addField("🔱| اسم الحساب :", `${msg.author.username}#${msg.author.discriminator}`, true)
+          .addField("🆔| الاي دي :", `${msg.author.id}`, true)
+          .setColor("RANDOM")
+          .setFooter(msg.author.username , msg.author.avatarURL)
+          .setThumbnail(`${msg.author.avatarURL}`)
+          .setTimestamp()
+          .setURL(`${msg.author.avatarURL}`)
+          .addField('📛| الحالة :', `${msg.author.presence.status.toUpperCase()}`, true)
+          .addField('🎲| بلاينج :', `${msg.author.presence.game === null ? "No Game" : msg.author.presence.game.name}`, true)
+          .addField('🏅| الرتب : ', `${msg.member.roles.filter(r => r.name).size}`, true)
+          .addField('📅| تم الانضمام للديسكورد في :', `${msg.createdAt}`,true)
+          .addField('🤖| هل هو بوت ؟', `${msg.author.bot.toString().toUpperCase()}`, true);
+      msg.channel.send({embed: embed})
+  }
 });
 
 
