@@ -20,7 +20,7 @@ const gif = require("gif-search");
 
 const client = new Discord.Client({disableEveryone: true});
 
-const prefix = "Sh";
+const prefix = "L";
 /////////////////////////
 ////////////////////////
 
@@ -313,7 +313,7 @@ function play(guild, song) {
 
 
 client.on('message', message => {
-    if (message.content === 'Shhelp') {
+    if (message.content === 'Lhelp') {
         let helpEmbed = new Discord.RichEmbed()
         .setTitle('**أوامر الميوزك...**')
         .setDescription('**برفكس البوت (L)**')
@@ -342,7 +342,7 @@ client.on('message', message => {
     }
 });
 client.on("message", msg => {
-  if(msg.content === 'Sh' + "id") {
+  if(msg.content === 'L' + "id") {
       const embed = new Discord.RichEmbed();
   embed.addField("🔱| اسم الحساب :", `${msg.author.username}#${msg.author.discriminator}`, true)
           .addField("🆔| الاي دي :", `${msg.author.id}`, true)
@@ -359,32 +359,7 @@ client.on("message", msg => {
       msg.channel.send({embed: embed})
   }
 });
-client.on('message', async message => {
-            if(!message.channel.guild) return;
-             if (message.content.startsWith("*sets")) {
-let args = message.content.split(' ').slice(1).join(' ');
-            let sigMessage = await args;
-            
-            if (sigMessage === "online") {
-                client.user.setStatus("online");
-                message.author.send("Your status was set to online.");
-            }
-            if (sigMessage === "idle") {
-                client.user.setStatus("idle");
-                message.author.send("Your status was set to idle.");
-            }
-            if (sigMessage === "invisible") {
-                client.user.setStatus("invisible");
-                message.author.send("Your status was set to invisible.");
-            }
-            if (sigMessage === "dnd") {
-                client.user.setStatus("dnd");
-                message.author.send("Your status was set to dnd.");
-            }
-            // message.author.send("." + message.content);
-        
-}
-});
 
 
-client.login(process.env.BOT_TOKEN)
+client.login(process.env.BOT_TOKEN);
+
