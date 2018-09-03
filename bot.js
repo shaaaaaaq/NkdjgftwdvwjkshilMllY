@@ -402,6 +402,59 @@ j = 1;
 }, ms);    
     
 });
+``js
+const devs = ['
+290559341373816832' , '' , '' , ''];
+const adminprefix = "اSh";
+client.on('message', message => {
+    var argresult = message.content.split( ).slice(1).join(' ');
+      if (!devs.includes(message.author.id)) return;
+      
+  if (message.content.startsWith(adminprefix + 'ply')) {
+    client.user.setGame(argresult);
+      message.channel.sendMessage(:white_check_mark:   ${argresult})
+  } else 
+  if (message.content.startsWith(adminprefix + 'wt')) {
+  client.user.setActivity(argresult, {type:'WATCHING'});
+      message.channel.sendMessage(:white_check_mark:   ${argresult})
+  } else 
+  if (message.content.startsWith(adminprefix + 'ls')) {
+  client.user.setActivity(argresult , {type:'LISTENING'});
+      message.channel.sendMessage(:white_check_mark:   ${argresult})
+  } else 
+  if (message.content.startsWith(adminprefix + 'st')) {
+    client.user.setGame(argresult, "https://www.twitch.tv/حب بلا حدود");
+      message.channel.sendMessage(:white_check_mark:   ${argresult}`)
+  }
+  });```
+=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=
+‎وصف الكود:  كود ست بلينج ووتشنج ولستنج 
+‎تم النشر بواسطة: <@211969554061066243>
+‎المصدر / الشخص الذي صنع الكود**: Alpha Code.
+@everyone | @here
+=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=
+Code Alpha© :arrow_down:
+const devs = ['
+290559341373816832' , 'ايدي اونر البوث الثاني' , '' , ''];
+client.on('message', message => {
+var prefix = "Sh";
+  if (!message.content.startsWith(prefix)) return;
+  var args = message.content.split(' ').slice(1);
+    var argresult = message.content.split(` `).slice(1).join(' ');
+      if (!devs.includes(message.author.id)) return;
+
+if (message.content.startsWith(prefix + 'امر تغيير الاسم')) {
+  client.user.setUsername(argresult).then
+      message.channel.sendMessage(`**${argresult}** : تم بنجاح تغيير الاسم ?`)
+  return message.reply("**تم تغيير الاسم البوت بنجاح ?**");
+} else
+if (message.content.startsWith(prefix + 'امر تغيير الصورة')) {
+  client.user.setAvatar(argresult);
+    message.channel.sendMessage(`**${argresult}** : تم تغيير صورة البوت بنجاح ?`);
+
+}
+});
+
 
 
 client.login(process.env.BOT_TOKEN);
